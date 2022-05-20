@@ -11956,6 +11956,6 @@ fieldset:disabled .btn {
 }
 
 .main {
-  width: calc(100vh - 280px);
+  width: calc(100vw - 280px);
 }
 /*# sourceMappingURL=all.css.map */
