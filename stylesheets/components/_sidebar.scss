@@ -1,0 +1,10 @@
+$sidebar-width: 280px;
+
+.sidebar{
+ width: $sidebar-width;
+}
+
+.main{
+  //calc可用於計算不同單位的運算
+ width: calc(100vh - #{$sidebar-width});
+}
