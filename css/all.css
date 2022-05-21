@@ -11992,6 +11992,10 @@ fieldset:disabled .btn {
   margin-left: 0;
 }
 
+.sidebar-toggled .main {
+  margin-left: 280px;
+}
+
 .main {
   width: 100%;
 }
@@ -12004,8 +12008,8 @@ fieldset:disabled .btn {
   .main {
     width: calc(100vw - 280px);
     margin-left: 280px;
-    -webkit-transition: margin-left;
-    transition: margin-left;
+    -webkit-transition: margin-left 0.25s;
+    transition: margin-left 0.25s;
   }
   .sidebar-toggled .sidebar {
     margin-left: -280px;

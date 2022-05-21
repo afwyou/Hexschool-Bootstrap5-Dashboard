@@ -39,6 +39,9 @@ $sidebar-width: 280px;
   .sidebar{
     margin-left: 0;
   }
+  .main {
+    margin-left: $sidebar-width;
+  }
 } 
 
 .main{
@@ -63,7 +66,7 @@ $sidebar-width: 280px;
   //calc可用於計算不同單位的運算
  width: calc(100vw - #{$sidebar-width});
  margin-left: $sidebar-width;
- transition: margin-left;
+ transition: margin-left 0.25s;
 }
 
   // 桌面版的預設是打開，加上後是收起來
