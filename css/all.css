@@ -11958,6 +11958,10 @@ fieldset:disabled .btn {
   transition: margin-left .25s;
 }
 
+.sidebar-toggled .sidebar {
+  margin-left: 0;
+}
+
 .main {
   width: 100%;
 }
@@ -11965,6 +11969,13 @@ fieldset:disabled .btn {
 @media (min-width: 992px) {
   .sidebar {
     width: 280px;
+    margin-left: 0;
+  }
+  .sidebar-toggled .sidebar {
+    margin-left: -280px;
+  }
+  .sidebar-toggled .main {
+    width: 100%;
     margin-left: 0;
   }
   .main {

@@ -6,21 +6,39 @@ $sidebar-width: 280px;
  margin-left: -$sidebar-width;
  transition: margin-left .25s; //動態的轉換效果越快越好
 }
+    //展開sidebar
+.sidebar-toggled {
+  .sidebar{
+    margin-left: 0;
+  }
+} 
 
 .main{
-  //calc可用於計算不同單位的運算
+    //calc可用於計算不同單位的運算
  width: 100%;
 }
 
 
 //桌面版（up）
-//除了將斷點寫在class裡面，也可以直接在scss裏寫上中斷點編譯
-//在bootstrap的文件>排版>斷點
+    //除了將斷點寫在class裡面，也可以直接在scss裏寫上中斷點編譯
+    //在bootstrap的文件>排版>斷點
 
 @include media-breakpoint-up(lg) {
 .sidebar{
  width: $sidebar-width;
  margin-left: 0;
+}
+
+  // 桌面版的預設是打開，加上後是收起來
+  //先把樣式寫好再來寫js
+.sidebar-toggled {
+ .sidebar {
+   margin-left: -$sidebar-width;
+ }
+ .main {
+   width: 100%;
+   margin-left: 0;
+ }
 }
 
 .main{

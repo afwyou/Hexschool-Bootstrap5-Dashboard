@@ -19,10 +19,20 @@
 
     <main class="main">
       <div class="bg-white w-100 border-bottom">
-        <a href="#" class="d-incline-block py-3 px-4 border-end"><i class="bi bi-arrows-angle-expand"></i></a>
+        <a href="#" class="d-incline-block py-3 px-4 border-end" id="toggle-btn"><i
+            class="bi bi-arrows-angle-expand"></i></a>
       </div>
     </main>
   </div>
+
+  <script>
+    const toggleMenuBtn = document.querySelector('#toggle-btn');
+    const body = document.querySelector('body');
+    toggleMenuBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      body.classList.toggle('sidebar-toggled');
+    })
+  </script>
 </body>
 
 </html>
