@@ -11956,6 +11956,8 @@ fieldset:disabled .btn {
   margin-left: -280px;
   -webkit-transition: margin-left .25s;
   transition: margin-left .25s;
+  position: fixed;
+  top: 0;
 }
 
 .sidebar .sidebar-link {

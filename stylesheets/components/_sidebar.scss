@@ -5,6 +5,8 @@ $sidebar-width: 280px;
  width: $sidebar-width;
  margin-left: -$sidebar-width;
  transition: margin-left .25s; //動態的轉換效果越快越好
+ position: fixed;
+ top: 0;
 
  .sidebar-link {
    color: $dark;
