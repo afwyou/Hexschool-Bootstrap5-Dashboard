@@ -12001,15 +12001,18 @@ fieldset:disabled .btn {
     width: 280px;
     margin-left: 0;
   }
+  .main {
+    width: calc(100vw - 280px);
+    margin-left: 280px;
+    -webkit-transition: margin-left;
+    transition: margin-left;
+  }
   .sidebar-toggled .sidebar {
     margin-left: -280px;
   }
   .sidebar-toggled .main {
     width: 100%;
     margin-left: 0;
-  }
-  .main {
-    width: calc(100vw - 280px);
   }
 }
 /*# sourceMappingURL=all.css.map */

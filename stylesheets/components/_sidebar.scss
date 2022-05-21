@@ -44,6 +44,7 @@ $sidebar-width: 280px;
 .main{
     //calc可用於計算不同單位的運算
  width: 100%;
+
 }
 
 
@@ -58,6 +59,13 @@ $sidebar-width: 280px;
 
 }
 
+.main{
+  //calc可用於計算不同單位的運算
+ width: calc(100vw - #{$sidebar-width});
+ margin-left: $sidebar-width;
+ transition: margin-left;
+}
+
   // 桌面版的預設是打開，加上後是收起來
   //先把樣式寫好再來寫js
 .sidebar-toggled {
@@ -70,8 +78,4 @@ $sidebar-width: 280px;
  }
 }
 
-.main{
-  //calc可用於計算不同單位的運算
- width: calc(100vw - #{$sidebar-width});
-}
 }
