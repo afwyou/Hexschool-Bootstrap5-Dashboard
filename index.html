@@ -14,44 +14,42 @@
 <body>
   <div class="d-flex">
     <aside>
-      <div class="sidebar vh-100 border-end d-flex bg-white flex-column pt-3 h4">
+      <div class="sidebar vh-100 border-end d-flex bg-white flex-column pt-3">
         <!-- 1後台名稱 -->
         <div class="px-4">
-          <strong>六角西餐廳</strong>
+          <strong class="h4">六角西餐廳</strong>
           - 後台管理
         </div>
         <!-- 2選單 -->
         <div class="overflow-auto mt-3">
-          <br>
-          <br>
-          <br>
-          <br>
-          <br>
-          <br>
-          <br>
-          <br>
-          <br>
-          <br>
-          <br>
-          <br>
-          <br>
-          <br>
-          <br>
-          <br>
-          <br>
-          <br>
-          <br>
-          <br>
-          <br>
-          <br>
-          <br>
-          <br>
-          <br>
-          <br>
-          <br>
-          <br>
-          <br>
-          <br>
+          <!-- 選單內層有兩種不同結構，可以直接用一個容器包起來 -->
+          <div>
+            <a href="#" class="sidebar-link">
+              <!-- 整體選單都會以一個周邊保留空間，所以再用一個容器包裹使用px-4的class來套用 -->
+              <div class="px-4">
+                首頁
+              </div>
+            </a>
+          </div>
+
+          <div>
+            <a href="#menu-order" class="sidebar-link" data-bs-toggle="collapse">
+              <div class="d-flex justify-content-between px-4">
+                <p class="mb-0">
+                  訂單管理
+                </p>
+                <i class="bi bi-caret-down"></i>
+              </div>
+            </a>
+            <!-- 下拉選單 -->
+            <div class="collapse" id="menu-order">
+              <a href="#" class="sidebar-link">
+                <div class="ps-5">
+                  其他項目
+                </div>
+              </a>
+            </div>
+          </div>
         </div>
         <!-- 3登出按鈕 -->
         <a href="#" class="mt-auto p-4 h2 sidebar-link"><i class="bi bi-box-arrow-right"></i></a>
@@ -65,7 +63,12 @@
       </div>
     </main>
   </div>
-
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
+    integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js"
+    integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy"
+    crossorigin="anonymous"></script>
   <script src="/javascripts/all.js"></script>
 </body>
 
