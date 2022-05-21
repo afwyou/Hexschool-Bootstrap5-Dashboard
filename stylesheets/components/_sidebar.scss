@@ -1,7 +1,16 @@
 $sidebar-width: 280px;
 
 //行動版預設
+.sidebar{
+ width: $sidebar-width;
+ margin-left: -$sidebar-width;
+ transition: margin-left .25s; //動態的轉換效果越快越好
+}
 
+.main{
+  //calc可用於計算不同單位的運算
+ width: 100%;
+}
 
 
 //桌面版（up）
@@ -11,6 +20,7 @@ $sidebar-width: 280px;
 @include media-breakpoint-up(lg) {
 .sidebar{
  width: $sidebar-width;
+ margin-left: 0;
 }
 
 .main{
