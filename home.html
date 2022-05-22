@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/css/all.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.2/font/bootstrap-icons.css">
+  <title>六角學院後台實作</title>
+</head>
+
+<body>
+  <div class="d-flex">
+    <aside>
+      <div class="sidebar vh-100 border-end d-flex bg-white flex-column pt-3">
+        <!-- 1後台名稱 -->
+        <div class="px-4">
+          <strong class="h4">六角西餐廳</strong>
+          - 後台管理
+        </div>
+        <!-- 2選單 -->
+        <div class="overflow-auto mt-3">
+          <!-- 選單內層有兩種不同結構，可以直接用一個容器包起來 -->
+          <div>
+            <a href="#" class="sidebar-link">
+              <!-- 整體選單都會以一個周邊保留空間，所以再用一個容器包裹使用px-4的class來套用 -->
+              <div class="px-4">
+                首頁
+              </div>
+            </a>
+          </div>
+
+          <div>
+            <a href="#menu-order" class="sidebar-link" data-bs-toggle="collapse">
+              <div class="d-flex justify-content-between px-4">
+                <p class="mb-0">
+                  訂單管理
+                </p>
+                <i class="bi bi-caret-down"></i>
+              </div>
+            </a>
+            <!-- 下拉選單 -->
+            <div class="collapse" id="menu-order">
+              <a href="#" class="sidebar-link">
+                <div class="ps-5">
+                  其他項目
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+        <!-- 3登出按鈕 -->
+        <a href="#" class="mt-auto p-4 h2 sidebar-link"><i class="bi bi-box-arrow-right"></i></a>
+      </div>
+    </aside>
+
+    <main class="main">
+      <div class="bg-white w-100 border-bottom sticky-top">
+        <a href="#" class="d-incline-block py-3 px-4 border-end" id="toggle-btn"><i
+            class="bi bi-arrows-angle-expand"></i></a>
+      </div>
+    </main>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
+    integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js"
+    integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy"
+    crossorigin="anonymous"></script>
+  <script src="/javascripts/all.js"></script>
+</body>
+
+</html>
