@@ -144,7 +144,7 @@
                         <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
                           <li><a class="dropdown-item" href="#">修改狀態</a></li>
                           <li><a class="dropdown-item text-danger" href="#" data-bs-toggle="modal"
-                              data-bs-target="#deletModal">刪除訂單</a></li>
+                              data-bs-target="#deletModal" data-bs-order-id="TX123456788">刪除訂單</a></li>
                         </ul>
                       </div>
                     </td>
@@ -243,7 +243,16 @@
   </div>
 
 
-
+  <script>
+    const modalByDelete = document.querySelector('#deleteModal');
+    modalByDelete.addEventListener('show.bs.modal', (e) => {
+      const button = e.relatedTarget;
+      console.log(button);
+      const orderId = button.dataset.bsOrderId;
+      const modalText = modalByDelete.querySelector('#deleteText');
+      modalText.textContent = orderId;
+    })
+  </script>
 
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
     integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk"
