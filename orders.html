@@ -58,7 +58,7 @@
 
     <main class="main">
       <div class="bg-white w-100 border-bottom sticky-top">
-        <a href="#" class="d-incline-block py-3 px-4 border-end" id="toggle-btn"><i
+        <a href="#" class="d-inline-block py-3 px-4 border-end" id="toggle-btn"><i
             class="bi bi-arrows-angle-expand"></i></a>
       </div>
 
@@ -126,7 +126,7 @@
                     <td class="ps-4">
                       <input type="checkbox" class="form-check-input">
                     </td>
-                    <td scope="row">767855</td>
+                    <td scope="row">TX123456788</td>
                     <td>ugugukk@gyhjbkjnn</td>
                     <td>卡小柏</td>
                     <td>大麥克全家餐</td>
@@ -143,7 +143,8 @@
                         </button>
                         <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
                           <li><a class="dropdown-item" href="#">修改狀態</a></li>
-                          <li><a class="dropdown-item" href="#">刪除訂單</a></li>
+                          <li><a class="dropdown-item text-danger" href="#" data-bs-toggle="modal"
+                              data-bs-target="#deletModal">刪除訂單</a></li>
                         </ul>
                       </div>
                     </td>
@@ -215,6 +216,26 @@
                 <li class="page-item"><a class="page-link" href="#">Next</a></li>
               </ul>
             </nav>
+          </div>
+
+          <!-- modal -->
+          <!-- Modal -->
+          <div class="modal fade" id="deletModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">刪除訂單</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <p>確認刪除「<span id="deleteText"></span>」的訂單嗎？</p>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-outline-dark" data-bs-dismiss="modal">Close</button>
+                  <button type="button" class="btn btn-danger">確認刪除</button>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
